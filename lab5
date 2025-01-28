@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Web Map</title>
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <style>
+        #map {
+            height: 100vh; /* Full-screen height */
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+        // Initialize the map and set its view to a given location and zoom level
+        var map = L.map('map').setView([4.232263565385536, 102.11415127850172], 8); // Coordinates for Peninsular Malaysia
+    
+        // Add a tile layer to the map (OpenStreetMap layer)
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+
+        // Add a marker to the map
+        var marker = L.marker([3.066456407493296, 101.50508336264016]).addTo(map);
+        marker.bindPopup("<b>Assalamualaikum wbt.!</b><br>I'm Nazran.<br>This is my UITM Shah Alam.").openPopup();
+        
+        // Add a marker Cesium radioactivity to the map
+        var marker = L.marker([5.83, 102.15]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs151.</b><br>
+            Tanah Merah.</br>
+            0.48 Bq/m2
+        `);
+        
+        // Add a marker Cesium radioactivity to the map
+        var marker = L.marker([5.83, 102.15]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs151.</b><br>
+            Tanah Merah.</br>
+            0.48 Bq/m2
+        `);
+       
+        // Add a circle to the map
+        var circle = L.circle([2.9090231511269398, 101.76945998437098], {
+            color: 'red',
+            fillColor: '#f03',
+            fillOpacity: 0.5,
+            radius: 5000
+        }).addTo(map);
+        circle.bindPopup("Nuclear emergency zone");
+
+        // Add a polygon to the map
+        var polygon = L.polygon([
+            [3.0834694960224143, 101.51569516580439],
+            [3.1578700579917607, 101.7113191977942],
+            [2.938820067751309, 101.69238773691484]
+        ]).addTo(map);
+        polygon.bindPopup("The triangle of Shah Alam, KLCC and Putrajaya");
+    </script>
+</body>
+</html>
