@@ -1,1 +1,1351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Web Map</title>
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <style>
+        #map {
+            height: 100vh; /* Full-screen height */
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+        // Initialize the map and set its view to a given location and zoom level
+        var map = L.map('map').setView([4.232263565385536, 102.11415127850172], 8); // Coordinates for Peninsular Malaysia
+    
+        // Add a tile layer to the map (OpenStreetMap layer)
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+
+        // Add a marker to the map
+        var marker = L.marker([3.066456407493296, 101.50508336264016]).addTo(map);
+        marker.bindPopup("<b>Assalamualaikum wbt.!</b><br>I'm Nazran.<br>This is my UITM Shah Alam.").openPopup();
+        
+        // Add a marker Cesium radioactivity to the map
+        var marker = L.marker([5.83, 102.15]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs151.</b><br>
+            Tanah Merah.</br>
+            0.48 Bq/m2
+        `);
+        
+        // Add a marker Cesium radioactivity to the map
+        var marker = L.marker([5.69, 101.84]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs152.</b><br>
+            Jeli.</br>
+            1.24 Bq/m2
+        `);
+
+        // Add a marker Cesium radioactivity to the map
+        var marker = L.marker([5.57, 101.43]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs29.</b><br>
+            60km Grik Jeli.</br>
+            0.00 Bq/m2
+        `);
+
+        // Add a marker Cesium radioactivity to the map
+        var marker = L.marker([5.54, 102.20]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs153.</b><br>
+            Kuala Kerai.</br>
+            1.35 Bq/m2
+        `);
+
+        // Add a marker Cesium radioactivity to the map
+        var marker = L.marker([5.44, 101.91]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs154.</b><br>
+            Kampong Kuala Balah.</br>
+            0.93 Bq/m2
+        `);
+	
+        // Add a marker Cesium radioactivity to the map
+        var marker = L.marker([5.38, 102.25]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs155.</b><br>
+            Manek Urai.</br>
+            0.00 Bq/m2
+        `);
+
+        // Add a marker Cesium radioactivity to the map
+        var marker = L.marker([5.30, 102.27]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs160.</b><br>
+            Kampong Tualang.</br>
+            1.35 Bq/m2
+        `);
+
+        // Add a marker Cesium radioactivity to the map
+        var marker = L.marker([5.29, 102.02]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs156.</b><br>
+            Kemubu.</br>
+            1.24 Bq/m2
+        `);
+
+        // Add a marker Cesium radioactivity to the map
+        var marker = L.marker([5.01, 102.37]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs159.</b><br>
+            Berhampiran Kg. Nuri.</br>
+            0.31 Bq/m2
+        `);
+
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([4.90, 101.79]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs158.</b><br>
+            Kampong Kuala Betis.</br>
+            109.52 Bq/m2
+        `);
+
+		
+		
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([4.88, 101.97]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs157.</b><br>
+            Gua Musang.</br>
+            43.82 Bq/m2
+        `);
+
+	
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([4.69, 102.03]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs102.</b><br>
+            Merapoh.</br>
+            116.34 Bq/m2
+        `);
+
+
+	    // Add a marker Cesium radioactivity to the map
+        var marker = L.marker([4.52, 101.43]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs103.</b><br>
+            Cameron Highland.</br>
+            72.14 Bq/m2
+        `);
+
+	    // Add a marker Cesium radioactivity to the map
+        var marker = L.marker([4.18, 102.04]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs104</b><br>
+            Kuala Lipis.</br>
+            105.30 Bq/m2
+        `);
+
+		
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([4.06, 102.31]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs104.</b><br>
+            Kuala Tembeling.</br>
+            83.93 Bq/m2
+        `);
+
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([4.01, 101.96]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs106.</b><br>
+            Benta.</br>
+            87.63 Bq/m2
+        `);
+
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([3.78, 102.54]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs110.</b><br>
+            Bandar Pusat Jengka.</br>
+            60.92 Bq/m2
+        `);
+		
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([3.78, 101.86]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs109.</b><br>
+            Raub.</br>
+            105.36 Bq/m2
+        `);
+
+	
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([3.71, 101.74]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs112.</b><br>
+            Bukit Fraser.</br>
+            84.69 Bq/m2
+        `);
+
+		
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([3.70, 102.36]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs113.</b><br>
+            Kuala Kerau.</br>
+            14.50 Bq/m2
+        `);
+
+		
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([3.58, 102.79]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs114.</b><br>
+            Maran.</br>
+            103.10 Bq/m2
+        `);
+
+		
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([3.50, 101.91]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs115.</b><br>
+            Bentong.</br>
+            49.81 Bq/m2
+        `);
+
+		
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([3.44, 102.42]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs116.</b><br>
+            Temerlohh.</br>
+            15.51 Bq/m2
+        `);
+	
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([3.43, 102.92]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs126.</b><br>
+            Chini.</br>
+            54.35 Bq/m2
+        `);
+	
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([3.41, 102.04]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs119.</b><br>
+            Karak.</br>
+            0.00 Bq/m2
+        `);
+
+	
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([3.40, 101.77]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs118.</b><br>
+            Genting Highland.</br>
+            0.00 Bq/m2
+        `);
+	
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([3.24, 102.41]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs120.</b><br>
+            Teriang.</br>
+            80.80 Bq/m2
+        `);
+
+		
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([3.15, 102.56]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs125.</b><br>
+            Tasek Bera.</br>
+            29.96 Bq/m2
+        `);
+	
+
+	    // Add a marker Cesium radioactivity to the map
+        var marker = L.marker([3.10, 102.22]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs64.</b><br>
+            Durian Tipus.</br>
+            56.86 Bq/m2
+        `);
+	
+
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([2.93, 102.06]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs65.</b><br>
+            Kuala Klawang.</br>
+            65.44 Bq/m2
+        `);
+	
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([2.92, 102.40]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs66.</b><br>
+            Air Hitam.</br>
+            73.82 Bq/m2
+        `);
+	
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([2.82, 102.41]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs72.</b><br>
+            Bahau.</br>
+            49.63 Bq/m2
+        `);
+	
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([2.76, 102.26]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs67.</b><br>
+            Kuala Pilah.</br>
+            86.53 Bq/m2
+        `);
+	
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([2.53, 102.49]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs73.</b><br>
+            Kg. Air Kuning Selatan.</br>
+            75.11 Bq/m2
+        `);
+
+	
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([6.23, 102.09]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs146.</b><br>
+            Pengkalan Kubur.</br>
+            41.15 Bq/m2
+        `);
+	
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([6.13, 102.23]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs147.</b><br>
+            Kota Bharu.</br>
+            197.64 Bq/m2
+        `);
+	
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([6.07, 102.40]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs148.</b><br>
+            Bachok.</br>
+            62.22 Bq/m2
+        `);
+
+		
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([6.04, 102.14]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs149.</b><br>
+            Pasir Mas.</br>
+            192.95 Bq/m2
+        `);
+		
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([5.83, 102.40]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs150.</b><br>
+            Pasir Putih.</br>
+            65.07 Bq/m2
+        `);
+		
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([5.74, 102.50]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs131.</b><br>
+            Jertih.</br>
+            195.88 Bq/m2
+        `);
+		
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([5.52, 102.75]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs132.</b><br>
+            Bandar Permaisuri.</br>
+            310.31 Bq/m2
+        `);
+	
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([5.48, 102.49]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs133.</b><br>
+            Kampong Keruak.</br>
+            109.68 Bq/m2
+        `);
+	
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([5.35, 102.90]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs134.</b><br>
+            Kampong Sungai Tong.</br>
+            84.16 Bq/m2
+        `);
+	
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([5.33,103.19]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs135.</b><br>
+            Kuala Terengganu.</br>
+            175.51 Bq/m2
+        `);
+	
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([5.07, 103.02]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs137.</b><br>
+            Kuala Berang.</br>
+            165.80 Bq/m2
+        `);
+		
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([4.97, 102.96]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs145.</b><br>
+            Kampong Sekayu.</br>
+            406.81 Bq/m2
+        `);
+	
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([4.85, 103.21]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs138.</b><br>
+            Jerangau.</br>
+            288.35 Bq/m2
+        `);
+		
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([4.75, 103.41]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs139.</b><br>
+            Dungun.</br>
+            95.25 Bq/m2
+        `);
+		
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([4.62, 103.21]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs140.</b><br>
+            Bandar Almuktafibillah.</br>
+            132.78 Bq/m2
+        `);
+	
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([4.51, 103.44]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs141.</b><br>
+            Kertih.</br>
+            149.19 Bq/m2
+        `);
+		
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([4.27, 103.21]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs142.</b><br>
+            Kampong Air Putih.</br>
+            62.91 Bq/m2
+        `);
+		
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([4.23, 103.42]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs143.</b><br>
+            Cukai.</br>
+            52.22 Bq/m2
+        `);
+		
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([4.15, 103.25]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs144.</b><br>
+            Bandar Cenih Baharu.</br>
+            26.59 Bq/m2
+        `);
+		
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([3.93, 103.04]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs107.</b><br>
+            Sungai Lembing.</br>
+            187.54 Bq/m2
+        `);
+		
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([3.82, 103.33]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs108.</b><br>
+            Kuantan.</br>
+            122.93 Bq/m2
+        `);
+	
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([5.90, 102.75]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs129.</b><br>
+            Pulau Perhentian.</br>
+            69.66 Bq/m2
+        `);
+	
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([5.77, 103.03]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs130.</b><br>
+            Pulau Redang.</br>
+            48.34 Bq/m2
+        `);
+	
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([5.22, 103.26]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs136.</b><br>
+            Pulau Kapas.</br>
+            187.28 Bq/m2
+        `);
+	
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([2.81, 104.15]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs124.</b><br>
+            Pulau Tioman.</br>
+            63.98 Bq/m2
+        `);
+		
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([3.69, 103.12]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs111.</b><br>
+            Gambang.</br>
+            126.14 Bq/m2
+        `);
+	
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([3.48, 103.39]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs117.</b><br>
+            Pekan.</br>
+            158.78 Bq/m2
+        `);
+	
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([3.36, 103.11]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs128.</b><br>
+            Paloh Hinai.</br>
+            64.46 Bq/m2
+        `);
+	
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([3.14, 103.44]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs122.</b><br>
+            Nenasi.</br>
+            101.22 Bq/m2
+        `);
+	
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([3.04, 103.09]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs121.</b><br>
+            Bandar Muadzam Shah.</br>
+            70.69 Bq/m2
+        `);
+		
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([2.85, 102.98]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs127.</b><br>
+            Bandar Dua Puloh Satu.</br>
+            41.50 Bq/m2
+        `);
+		
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([2.79,103.48]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs123.</b><br>
+            Kuala Rompin.</br>
+            178.59 Bq/m2
+        `);
+	
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([2.65,103.62]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs79.</b><br>
+            Padang Endau.</br>
+            0.93 Bq/m2
+        `);
+	
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([2.58, 102.62]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs69.</b><br>
+            Gemas.</br>
+            28.55 Bq/m2
+        `);
+	
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([2.49, 102.80]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs80.</b><br>
+            Segamat.</br>
+            77.70 Bq/m2
+        `);
+    	
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([2.49, 102.24]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs71.</b><br>
+            Tampin.</br>
+            43.44 Bq/m2
+        `);
+	
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([2.46, 103.83]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs82.</b><br>
+            Mersing.</br>
+            174.87 Bq/m2
+        `);
+	
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([2.41, 103.01]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs81.</b><br>
+            Labis.</br>
+            13.03 Bq/m2
+        `);
+		 
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([2.38, 102.54]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs74.</b><br>
+            Bukit Asahan.</br>
+            74.97 Bq/m2
+        `);
+		
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([2.36, 102.06]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs75.</b><br>
+            Kuala Sungai Baru.</br>
+            121.11 Bq/m2
+        `);
+		
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([2.30, 102.43]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs76.</b><br>
+            Jasin.</br>
+            87.30 Bq/m2
+        `);
+		
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([2.20, 103.52]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs83.</b><br>
+            Kg. Kahang Kangkar.</br>
+            62.35 Bq/m2
+        `);
+		
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([2.18, 102.29]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs77.</b><br>
+            Bandar Melaka.</br>
+            44.80 Bq/m2
+        `);
+	
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([2.16, 103.16]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs84.</b><br>
+            Paloh.</br>
+            52.64 Bq/m2
+        `);
+		
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([2.14, 102.41]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs78.</b><br>
+            Merlimau.</br>
+            75.30 Bq/m2
+        `);
+	
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([2.13, 102.76]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs85.</b><br>
+            Pagoh.</br>
+            41.41 Bq/m2
+        `);
+		
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([2.05, 103.34]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs89.</b><br>
+            Keluang.</br>
+            142.13 Bq/m2
+        `);
+	
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([2.02, 102.57]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs87.</b><br>
+            Muar.</br>
+            140.07 Bq/m2
+        `);
+	
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([2.00, 103.05]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs88.</b><br>
+            Yong Peng.</br>
+            55.13 Bq/m2
+        `);
+	
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([1.97, 103.87]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs86.</b><br>
+            Ulu Sedili.</br>
+            141.90 Bq/m2
+        `);
+	
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([1.91, 104.10]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs90.</b><br>
+            Kg. Tanjong Lembu.</br>
+           46.11 Bq/m2
+        `);
+		
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([1.86, 102.91]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs91.</b><br>
+            Batu Pahat.</br>
+            163.53 Bq/m2
+        `);
+	
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([1.83, 103.31]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs92.</b><br>
+            Simpang Renggam.</br>
+            118.21 Bq/m2
+        `);
+		
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([1.83, 103.63]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs94.</b><br>
+            Bandar Tenggara.</br>
+            28.23 Bq/m2
+        `);
+		
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([1.75, 103.92]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs93.</b><br>
+            Kota Tinggi.</br>
+            95.93 Bq/m2
+        `);
+		
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([1.70, 103.12]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs100.</b><br>
+            Rengit.</br>
+            126.93 Bq/m2
+        `);
+		
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([1.67, 103.58]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs101.</b><br>
+            Kulai.</br>
+            44.11 Bq/m2
+        `);
+	
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([1.52, 104.28]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs97.</b><br>
+            Desaru.</br>
+            128.16 Bq/m2
+        `);
+		
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([1.51, 103.39]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs95.</b><br>
+            Pontian Kecil.</br>
+            95.41 Bq/m2
+        `);
+		
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([1.47, 103.73]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs96.</b><br>
+            Johor Bahru.</br>
+            112.02 Bq/m2
+        `);
+		
+	    // Add a marker Cesium radioactivity to the map
+        var marker = L.marker([1.37, 104.11]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs99.</b><br>
+            Penggerang.</br>
+            137.00 Bq/m2
+        `);
+		
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([1.35, 103.46]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs98.</b><br>
+            Kukup.</br>
+            84.98 Bq/m2
+        `);
+	
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([6.70, 100.19]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs1.</b><br>
+            Wang Klian.</br>
+            40.74 Bq/m2
+        `);
+	
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([6.66, 100.31]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs2.</b><br>
+            Padang Besar.</br>
+            43.03 Bq/m2
+        `);
+		
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([6.50, 100.41]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs4.</b><br>
+            Bukit Kayu Hitam.</br>
+            80.56 Bq/m2
+        `);
+		
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([6.42, 100.20]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs3.</b><br>
+            Kangar.</br>
+            38.23 Bq/m2
+        `);
+		
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([6.34, 100.69]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs18.</b><br>
+            Padang Sanai.</br>
+            42.52 Bq/m2
+        `);
+		
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([6.26, 100.61]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs5.</b><br>
+            Kuala Nerang.</br>
+            76.68 Bq/m2
+        `);
+	 
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([6.11, 100.37]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs6.</b><br>
+            Alor Setar.</br>
+            56.05 Bq/m2
+        `);
+	
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([6.05, 100.76]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs7.</b><br>
+            Nami.</br>
+            27.66 Bq/m2
+        `);
+	
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([6.00, 100.62]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs8.</b><br>
+            Sungai Tiang.</br>
+            14.60 Bq/m2
+        `);
+	
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([5.98, 100.35]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs19.</b><br>
+            Sala.</br>
+            97.90 Bq/m2
+        `);
+		
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([5.85, 100.89]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs20.</b><br>
+            Weng.</br>
+            127.82 Bq/m2
+        `);
+		
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([5.83, 100.75]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs9.</b><br>
+            Sik.</br>
+            47.19 Bq/m2
+        `);
+		
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([5.82, 100.51]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs10.</b><br>
+            Gurun.</br>
+            107.43 Bq/m2
+        `);
+		
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([5.77, 100.37]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs11.</b><br>
+            Yan.</br>
+            112.28 Bq/m2
+        `);
+	
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([5.66, 100.48]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs12.</b><br>
+            Sungai Petani.</br>
+            281.50 Bq/m2
+        `);
+	
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([5.66, 100.92]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs14.</b><br>
+            Baling.</br>
+            12.21 Bq/m2
+        `);
+		
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([5.59, 100.76]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs13.</b><br>
+            Binjul.</br>
+            27.89 Bq/m2
+        `);
+	
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([5.53, 101.26]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs28.</b><br>
+            30km Grik-Jeli.</br>
+            48.92 Bq/m2
+        `);
+		
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([5.45, 100.40]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs21.</b><br>
+            Butterworth.</br>
+            81.76 Bq/m2
+        `);
+		
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([5.43, 101.11]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs27.</b><br>
+            Grik.</br>
+            64.88 Bq/m2
+        `);
+		
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([5.41, 100.54]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs15.</b><br>
+            Kulim.</br>
+            138.88 Bq/m2
+        `);
+	
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([5.31, 101.05]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs26.</b><br>
+            Lawin.</br>
+            0.00 Bq/m2
+        `);
+		
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([5.20, 100.68]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs30.</b><br>
+            Selama.</br>
+            115.90 Bq/m2
+        `);
+		
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([5.19, 100.49]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs22.</b><br>
+            Nibong Tebal.</br>
+            77.07 Bq/m2
+        `);
+		
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([5.05, 100.95]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs31.</b><br>
+            Lenggong.</br>
+            126.45 Bq/m2
+        `);
+		
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([5.01, 100.41]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs33.</b><br>
+            Kuala Kurau.</br>
+            80.14 Bq/m2
+        `);
+		
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([4.98, 100.65]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs32.</b><br>
+            Bukit Merah.</br>
+            98.74 Bq/m2
+        `);
+		
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([4.95, 101.12]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs34.</b><br>
+            Lasah.</br>
+            61.42 Bq/m2
+        `);
+		
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([4.83, 101.11]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs46.</b><br>
+            Kg. Jalong.</br>
+            70.95 Bq/m2
+        `);
+		
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([4.81, 100.72]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs35.</b><br>
+            Taiping.</br>
+            116.38 Bq/m2
+        `);
+	
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([4.78, 100.95]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs36.</b><br>
+            Kuala Kangsar.</br>
+            118.66 Bq/m2
+        `);
+		
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([4.64, 101.11]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs37.</b><br>
+            Ipoh.</br>
+            70.95 Bq/m2
+        `);
+	
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([4.50, 100.81]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs47.</b><br>
+            Beruas.</br>
+            0.00 Bq/m2
+        `);
+		
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([4.49,  100.64]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs38.</b><br>
+            Pantai Remis.</br>
+            70.62 Bq/m2
+        `);
+		
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([4.49, 100.92]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs39.</b><br>
+            Parit.</br>
+           139.91 Bq/m2
+        `);
+		
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([4.46, 101.04]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs49.</b><br>
+            Batu Gajah.</br>
+            130.54 Bq/m2
+        `);
+		
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([4.35, 100.87]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs48.</b><br>
+            Kampong Bota.</br>
+            89.74 Bq/m2
+        `);
+		
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([4.19, 101.26]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs41.</b><br>
+            Tapah.</br>
+            35.98 Bq/m2
+        `);
+		
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([4.18, 100.95]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs51.</b><br>
+            Kg. Gajah.</br>
+            103.90 Bq/m2
+        `);
+	
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([4.02, 101.04]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs42.</b><br>
+            Telok Intan.</br>
+            97.80 Bq/m2
+        `);
+	
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([4.01, 101.34]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs44.</b><br>
+            Sungkai.</br>
+            212.28 Bq/m2
+        `);
+	
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([3.98, 100.78]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs43.</b><br>
+            Bagan Datok.</br>
+            130.33 Bq/m2
+        `);
+	
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([3.85, 101.44]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs50.</b><br>
+            Slim.</br>
+            73.07 Bq/m2
+        `);
+	
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([3.78, 101.00]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs52.</b><br>
+            Sabak.</br>
+            85.49 Bq/m2
+        `);
+	
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([3.71, 101.16]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs61.</b><br>
+            Kg.To' Khalifah-Soeharto.</br>
+            84.88 Bq/m2
+        `);
+	
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([3.67,101.53]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs45.</b><br>
+            Tanjong Malim.</br>
+            78.84 Bq/m2
+        `);
+		
+	    // Add a marker Cesium radioactivity to the map
+        var marker = L.marker([3.56, 101.66]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs53.</b><br>
+            Kuala Kubu Baru.</br>
+            60.57 Bq/m2
+        `);
+	
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([3.49, 101.11]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs54.</b><br>
+            Kuala Selangor.</br>
+            78.55 Bq/m2
+        `);
+		
+	    // Add a marker Cesium radioactivity to the map
+        var marker = L.marker([3.49,101.11]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs63.</b><br>
+            Sekincan.</br>
+            73.41 Bq/m2
+        `);
+		
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([3.49, 101.49]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs62.</b><br>
+            Ldg. Nigel Gardner.</br>
+            104.25 Bq/m2
+        `);
+	
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([3.34, 101.58]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs55.</b><br>
+            Rawang.</br>
+            77.97 Bq/m2
+        `);
+		
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([3.21,101.87]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs58.</b><br>
+            Kuala Pangsoon.</br>
+            81.95 Bq/m2
+        `);
+	
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([3.17, 101.68]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs56.</b><br>
+            Kuala Lumpur.</br>
+            53.88 Bq/m2
+        `);
+	
+	    // Add a marker Cesium radioactivity to the map
+        var marker = L.marker([3.01, 101.40]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs57.</b><br>
+            P. Kelang.</br>
+            57.29 Bq/m2
+        `);
+	
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([2.86, 101.69]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs59.</b><br>
+            Dengkil.</br>
+            54.57 Bq/m2
+        `);
+	
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([2.72, 101.92]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs68.</b><br>
+            Seremban.</br>
+            38.17 Bq/m2
+        `);
+	
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([2.68, 101.52]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs60.</b><br>
+            Batu Laut.</br>
+            97.27 Bq/m2
+        `);
+		
+	    // Add a marker Cesium radioactivity to the map
+        var marker = L.marker([2.50, 101.85]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs70.</b><br>
+            Port Dickson.</br>
+            71.78 Bq/m2
+        `);
+		
+	    // Add a marker Cesium radioactivity to the map
+        var marker = L.marker([6.40, 99.85]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs17.</b><br>
+            Air Hangat.</br>
+            134.70 Bq/m2
+        `);
+		
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([6.34, 99.74]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs16.</b><br>
+            Pdg. Mat Sirat.</br>
+            79.21 Bq/m2
+        `);
+		
+	    // Add a marker Cesium radioactivity to the map
+        var marker = L.marker([5.42, 100.22]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs23.</b><br>
+           Telok Bahang.</br>
+            155.65 Bq/m2
+        `);
+	
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([5.33, 100.22]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs24.</b><br>
+            Balik Pulau.</br>
+            77.60 Bq/m2
+        `);
+	
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([5.28, 100.29]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs25.</b><br>
+            Batu Maung.</br>
+            26.47 Bq/m2
+        `);
+		
+    	// Add a marker Cesium radioactivity to the map
+        var marker = L.marker([4.24, 100.57]).addTo(map);
+        marker.bindPopup(`
+            <b>Cs40.</b><br>
+            Pulau Pangkor.</br>
+            49.10 Bq/m2
+        `);
+
+       
+        // Add a circle to the map
+        var circle = L.circle([2.9090231511269398, 101.76945998437098], {
+            color: 'red',
+            fillColor: '#f03',
+            fillOpacity: 0.5,
+            radius: 5000
+        }).addTo(map);
+        circle.bindPopup("Nuclear emergency zone");
+
+        // Add a polygon to the map
+        var polygon = L.polygon([
+            [3.0834694960224143, 101.51569516580439],
+            [3.1578700579917607, 101.7113191977942],
+            [2.938820067751309, 101.69238773691484]
+        ]).addTo(map);
+        polygon.bindPopup("The triangle of Shah Alam, KLCC and Putrajaya");
+    </script>
+</body>
+</html>
 
